@@ -41,8 +41,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5px 20px;
-  background-color: #a6a2c1;
+  padding: 0px 20px;
+  padding-top: 5px;
 }
 
 .main-nav a {
@@ -291,4 +291,13 @@ body {
   .transaction-button {
     width: 200px;
   }
+}
+
+.user-icon {
+  width: 17px;
+  height: 17px;
+  vertical-align: top;
+
+  margin-top: 1px;
+  margin-right: 7px;
 }
