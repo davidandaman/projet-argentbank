@@ -19,6 +19,8 @@ body {
 
 .bg-dark {
   background-color: #12002b;
+  padding-top: 3rem;
+  padding-bottom: 6rem;
 }
 
 .sr-only {
@@ -39,8 +41,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5px 20px;
-  background-color: #a6a2c1;
+  padding: 0px 20px;
+  padding-top: 5px;
 }
 
 .main-nav a {
@@ -166,7 +168,6 @@ body {
   background-color: white;
   width: 300px;
   margin: 0 auto;
-  margin-top: 3rem;
   padding: 2rem;
 }
 
@@ -282,6 +283,13 @@ body {
   .transaction-button {
     width: 200px;
   }
+}
+.user-icon {
+  width: 17px;
+  height: 17px;
+  vertical-align: top;
+  margin-top: 1px;
+  margin-right: 7px;
 }
 
 /*# sourceMappingURL=layout.css.map */
