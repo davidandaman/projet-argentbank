@@ -10,19 +10,40 @@ html {
 
 body {
   margin: 0;
+  padding: 0;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
 }
 
 .main {
-  flex: 1;
+  min-height: calc(100vh - 100px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  background-color: rgb(255, 255, 255);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.footer-text {
+  margin: 0;
+  padding: 0;
 }
 
 .bg-dark {
   background-color: #12002b;
-  padding-top: 3rem;
-  padding-bottom: 6rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 100%;
 }
 
 .sr-only {
@@ -264,8 +285,12 @@ body {
 }
 
 .header {
-  color: #fff;
-  margin-bottom: 2rem;
+  background-color: #ffffff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1001;
 }
 
 .transaction-button {
@@ -301,4 +326,10 @@ body {
 
   margin-top: 1px;
   margin-right: 7px;
+}
+
+@media (max-width: 720px) {
+  .main {
+    padding-bottom: 100px;
+  }
 }
