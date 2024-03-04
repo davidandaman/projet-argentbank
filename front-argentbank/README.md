@@ -1,6 +1,6 @@
 # Projet ARGENTBANK
 
-# Issue: 20/02/2024
+# Issue: 20/02/2024.
 
 # Getting Started with Create React App
 
