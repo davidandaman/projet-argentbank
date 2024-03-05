@@ -46,7 +46,7 @@ export default function EditUserProfile({ setIsEditing }) {
         />
       </div>
       <div className="edit-button-container">
-        <PrimaryButton type="submit" className="save-button" value="Save" />
+        <PrimaryButton type="submit" className="button-save" value="Save" />
         <PrimaryButton
           type="button"
           className="cancel-button"
