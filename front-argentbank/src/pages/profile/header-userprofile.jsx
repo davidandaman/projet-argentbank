@@ -1,3 +1,4 @@
+// HeaderUserProfile.js
 import React, { useEffect, useState } from "react";
 import PrimaryButton from "../../components/login-elements/submitbutton";
 import EditUserProfile from "./edit-form-userprofile";
@@ -18,7 +19,7 @@ export default function HeaderUserProfile() {
   };
 
   return (
-    <div className="header">
+    <div className="user-profile">
       <h1>Welcome back</h1>
       {isEditing ? (
         <EditUserProfile setIsEditing={setIsEditing} />

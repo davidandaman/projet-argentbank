@@ -10,9 +10,19 @@ export default function EditUserProfile({ setIsEditing }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const updatedUserData = { ...userDatas, userName };
-    dispatch(updateUserDatas(updatedUserData));
     setIsEditing(false);
+    const updatedData = {
+      firstName: userDatas.firstName,
+      lastName: userDatas.lastName,
+      email: userDatas.email,
+      userName: userName, // Utilisez userName ici
+    };
+    dispatch(updateUserDatas(updatedData));
+    console.log(
+      "Anciennes données :",
+      userDatas.userName !== undefined ? userDatas.userName : "Non défini"
+    );
+    console.log("Nouvelles données :", updatedData);
   };
 
   return (

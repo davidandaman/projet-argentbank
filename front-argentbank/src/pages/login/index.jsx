@@ -1,15 +1,14 @@
+import React, { useRef } from "react";
 import userIcon from "../../assets/img/icon-user.png";
-import { useEffect, useRef } from "react";
 import Input from "../../components/login-elements/inputform";
 import PrimaryButton from "../../components/login-elements/submitbutton";
 import { useNavigate } from "react-router-dom";
 import { login } from "../../datas/connexion-api";
 import { useDispatch, useSelector } from "react-redux";
-import { setRememberMe } from "../../redux/userslice";
+import { setRememberMe, setLoginError } from "../../redux/userslice";
 import {
-  deleteLoginCredentials,
-  getLocalStorageValues,
   saveLoginCredentials,
+  deleteLoginCredentials,
 } from "../../components/login-elements/savedvalues";
 
 export default function SigninUser() {
@@ -17,6 +16,7 @@ export default function SigninUser() {
   const passwordRef = useRef();
   const navigate = useNavigate();
   const rememberMe = useSelector((state) => state.auth.rememberMe);
+  const error = useSelector((state) => state.auth.error);
   const dispatch = useDispatch();
 
   const onSubmit = (e) => {
@@ -24,7 +24,10 @@ export default function SigninUser() {
     login({
       email: emailRef.current.value,
       password: passwordRef.current.value,
-    }).then(() => navigate("/user"));
+    }).then(
+      () => navigate("/user"),
+      () => dispatch(setLoginError("Invalid username or password"))
+    );
 
     if (rememberMe) {
       saveLoginCredentials(emailRef.current.value, passwordRef.current.value);
@@ -33,27 +36,15 @@ export default function SigninUser() {
     }
   };
 
-  useEffect(() => {
-    const rememberMeValue = localStorage.getItem("rememberMe");
-    const { rememberedEmail, rememberedPassword } = getLocalStorageValues([
-      "rememberedEmail",
-      "rememberedPassword",
-    ]);
-
-    if (rememberMeValue === "true" && rememberedEmail && rememberedPassword) {
-      dispatch(setRememberMe(true));
-      emailRef.current.value = rememberedEmail;
-      passwordRef.current.value = rememberedPassword;
-    }
-  }, []);
-
   return (
-    <div className="main bg-dark">
+    <div className="main bg-dark-login">
       <section className="sign-in-content">
         <img className="user-icon" src={userIcon} alt="User" />
         <h1>Sign In</h1>
 
         <form onSubmit={onSubmit}>
+          {error && <p className="error-message">{error}</p>}{" "}
+          {/* Affichez l'erreur si elle existe */}
           <Input
             type="text"
             className="input-wrapper"
@@ -62,7 +53,7 @@ export default function SigninUser() {
             id="username"
             reference={emailRef}
           />
-
+          {/* Champ de mot de passe */}
           <Input
             type="password"
             className="input-wrapper"
@@ -71,17 +62,7 @@ export default function SigninUser() {
             id="password"
             reference={passwordRef}
           />
-
-          <div className="input-remember">
-            <label htmlFor="remember-me">Remember me</label>
-            <input
-              type="checkbox"
-              id="remember-me"
-              checked={rememberMe}
-              onChange={() => dispatch(setRememberMe(!rememberMe))}
-            />
-          </div>
-
+          {/* Bouton de soumission */}
           <PrimaryButton className="sign-in-button" value="Sign In" />
         </form>
       </section>

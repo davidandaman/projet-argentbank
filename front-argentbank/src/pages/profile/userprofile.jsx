@@ -5,8 +5,8 @@ import Account from "../../components/bankaccount";
 export default function UserProfile() {
   return (
     <main className="main bg-dark profile-page ">
-      <HeaderUserProfile />
       <h2 className="sr-only">Accounts</h2>
+      <HeaderUserProfile />
       <Account
         title={"Argent Bank Checking (x8349)"}
         amount={"$2,082.79"}

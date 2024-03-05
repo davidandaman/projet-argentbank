@@ -8,7 +8,7 @@ export const getUserDatas = createAsyncThunk("auth/getUserDatas", async () => {
   };
   try {
     const request = await Axios.post("/profile", headers);
-    const response = request.data.body; // Modification ici
+    const response = request.data.body;
     return response;
   } catch (error) {
     return error;
@@ -23,7 +23,7 @@ export const updateUserDatas = createAsyncThunk(
       const response = request.data.body;
       console.log("Anciennes données :", formData);
       console.log("Nouvelles données :", response);
-      dispatch(setUserDatas(response)); // Assurez-vous que setUserDatas est correctement appelé ici
+      dispatch(setUserDatas(response));
       return response;
     } catch (error) {
       return error;
@@ -50,6 +50,9 @@ const userSlice = createSlice({
     setisLogged: (state, action) => {
       state.isLogged = action.payload;
     },
+    setLoginError: (state, action) => {
+      state.error = action.payload;
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -69,5 +72,6 @@ const userSlice = createSlice({
   },
 });
 
-export const { setUserDatas, setRememberMe, setisLogged } = userSlice.actions;
+export const { setUserDatas, setRememberMe, setisLogged, setLoginError } =
+  userSlice.actions;
 export default userSlice.reducer;

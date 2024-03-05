@@ -10,40 +10,43 @@ html {
 
 body {
   margin: 0;
-  padding: 0;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
 .main {
-  min-height: calc(100vh - 100px);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  flex: 1;
+}
+
+.bg-dark,
+.bg-dark-login {
+  background-color: #12002b;
+  min-height: 100vh;
+  margin-bottom: -100px;
+}
+
+.bg-dark {
+  padding-bottom: 100px;
+}
+
+.bg-dark-login {
+  padding-bottom: 160px;
 }
 
 .footer {
-  background-color: rgb(255, 255, 255);
+  justify-content: center;
+  border-top: 2px solid #ccc;
+  padding: 2rem 0 1.5rem;
+  background-color: #fff;
   position: fixed;
   bottom: 0;
   left: 0;
-  right: 0;
-  z-index: 1000;
+  width: 100%;
 }
 
 .footer-text {
   margin: 0;
   padding: 0;
-}
-
-.bg-dark {
-  background-color: #12002b;
-  position: absolute;
-  left: 0;
-  right: 0;
-  height: 100%;
 }
 
 .sr-only {
@@ -157,7 +160,6 @@ body {
 @media (min-width: 920px) {
   .features {
     flex-direction: row;
-    padding-bottom: 100px;
   }
 }
 
@@ -193,6 +195,9 @@ body {
 }
 
 .sign-in-content {
+  display: block;
+  position: relative;
+  top: 100px;
   box-sizing: border-box;
   background-color: white;
   width: 300px;
@@ -245,18 +250,6 @@ body {
 .input-wrapper input {
   padding: 5px;
   font-size: 1.2rem;
-}
-
-.footer {
-  display: flex;
-  justify-content: center;
-  border-top: 2px solid #ccc;
-  padding: 2rem 0 1.5rem;
-}
-
-.footer-text {
-  margin: 0;
-  padding: 0;
 }
 
 .account {
@@ -313,6 +306,13 @@ body {
   z-index: 1001;
 }
 
+.user-profile {
+  line-height: 1em;
+  color: #fff;
+  padding-bottom: 50px;
+  padding-top: 100px;
+}
+
 .transaction-button {
   display: block;
   width: 100%;
@@ -343,13 +343,6 @@ body {
   width: 17px;
   height: 17px;
   vertical-align: top;
-
   margin-top: 1px;
   margin-right: 7px;
-}
-
-@media (max-width: 720px) {
-  .main {
-    padding-bottom: 100px;
-  }
 }
