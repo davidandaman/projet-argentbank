@@ -6,9 +6,9 @@ export const getUserDatas = createAsyncThunk("auth/getUserDatas", async () => {
     "Content-Type": "application/json",
     Authorization: `Bearer ${localStorage.getItem("token")}`,
   };
-  const request = await Axios.post("/profile", headers);
   try {
-    const response = await request.data.body;
+    const request = await Axios.post("/profile", headers);
+    const response = request.data.body; // Modification ici
     return response;
   } catch (error) {
     return error;
@@ -18,10 +18,12 @@ export const getUserDatas = createAsyncThunk("auth/getUserDatas", async () => {
 export const updateUserDatas = createAsyncThunk(
   "auth/updateUserDatas",
   async (formData, { dispatch }) => {
-    const request = await Axios.put("/profile", formData);
     try {
-      const response = await request.data.body;
-      dispatch(setUserDatas(response));
+      const request = await Axios.put("/profile", formData);
+      const response = request.data.body;
+      console.log("Anciennes données :", formData);
+      console.log("Nouvelles données :", response);
+      dispatch(setUserDatas(response)); // Assurez-vous que setUserDatas est correctement appelé ici
       return response;
     } catch (error) {
       return error;
@@ -29,7 +31,7 @@ export const updateUserDatas = createAsyncThunk(
   }
 );
 
-const authSlice = createSlice({
+const userSlice = createSlice({
   name: "auth",
   initialState: {
     userDatas: null,
@@ -67,5 +69,5 @@ const authSlice = createSlice({
   },
 });
 
-export const { setUserDatas, setRememberMe, setisLogged } = authSlice.actions;
-export default authSlice.reducer;
+export const { setUserDatas, setRememberMe, setisLogged } = userSlice.actions;
+export default userSlice.reducer;

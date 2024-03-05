@@ -1,48 +1,29 @@
-import React from "react";
-import { useRef } from "react";
-import Input from "../../components/login-elements/inputform";
-import PrimaryButton from "../../components/login-elements/submitbutton";
-import { useDispatch } from "react-redux";
+import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { updateUserDatas } from "../../redux/userslice";
-
-import BankAccount from "../../components/bankaccount";
+import PrimaryButton from "../../components/login-elements/submitbutton";
 
 export default function EditUserProfile({ setIsEditing }) {
   const dispatch = useDispatch();
-  const firstNameRef = useRef();
-  const lastNameRef = useRef();
+  const userDatas = useSelector((state) => state.auth.userDatas);
+  const [userName, setUserName] = useState(userDatas.userName || "");
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const updatedUserData = { ...userDatas, userName };
+    dispatch(updateUserDatas(updatedUserData));
     setIsEditing(false);
-    dispatch(
-      updateUserDatas({
-        firstName: firstNameRef.current.value,
-        lastName: lastNameRef.current.value,
-      })
-    );
   };
 
   return (
     <form onSubmit={handleSubmit}>
       <div className="input-edit-container">
-        <Input
+        <label htmlFor="userName">Username:</label>
+        <input
           type="text"
-          className="input-wrapper input-edit"
-          label=""
-          htmlFor="firstName"
-          id="firstName"
-          reference={firstNameRef}
-          placeholder="Prénom"
-        />
-        <Input
-          type="text"
-          className="input-wrapper input-edit"
-          label=""
-          htmlFor="lastName"
-          id="lastName"
-          reference={lastNameRef}
-          placeholder="Nom"
+          id="userName"
+          value={userName}
+          onChange={(e) => setUserName(e.target.value)}
         />
       </div>
       <div className="edit-button-container">

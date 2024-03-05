@@ -1,11 +1,8 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import PrimaryButton from "../../components/login-elements/submitbutton";
-import { useState, useEffect } from "react";
 import EditUserProfile from "./edit-form-userprofile";
 import { useDispatch, useSelector } from "react-redux";
 import { getUserDatas } from "../../redux/userslice";
-
-import BankAccount from "../../components/bankaccount";
 
 export default function HeaderUserProfile() {
   const userDatas = useSelector((state) => state.auth.userDatas);
@@ -14,7 +11,11 @@ export default function HeaderUserProfile() {
 
   useEffect(() => {
     dispatch(getUserDatas());
-  }, []);
+  }, [dispatch]);
+
+  const handleEdit = () => {
+    setIsEditing(true);
+  };
 
   return (
     <div className="header">
@@ -31,7 +32,7 @@ export default function HeaderUserProfile() {
           <PrimaryButton
             className="edit-button"
             value="Edit Name"
-            handleClick={() => setIsEditing(true)}
+            handleClick={handleEdit}
           />
         </div>
       )}
