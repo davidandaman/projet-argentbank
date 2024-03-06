@@ -25,16 +25,16 @@
 
 A user should be able to:
 
-**✓ Navigate to the home page (/)**
-**✓ See all placeholder data from mockup**
+- Navigate to the home page (/)
+- See all placeholder data from mockup
 
 ## #2 Login Requirement
 
 A user should be able to:
 
-- **✓ Navigate to the login page (/login)**
-- **✓ Fill out credentials**
-- **✓ Login to the back-end API with JWT tokens for authentication**
+- ✓ Navigate to the login page (/login)\*\*
+- Fill out credentials\*\*
+- Login to the back-end API with JWT tokens for authentication\*\*
 - **✓ Successfully navigate to a profile page (/profile)**
 
 ## #3 Logout Requirement
