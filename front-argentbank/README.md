@@ -4,7 +4,8 @@
 </p>
 
 <h1 align="center">React JS App Front-end</h1>
-
+<br>
+<br>
 ### `version`
 
 - 1.0
@@ -19,7 +20,8 @@
 
 ###
 
-###
+<br>
+<br>
 
 <h1>Issue Template:</h1>
 
