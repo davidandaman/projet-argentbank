@@ -19,7 +19,9 @@
 
 ###
 
-<h2 align="center">Issue Template:</h2>
+###
+
+<h1>Issue Template:</h1>
 
 ## #1 Landing Page
 
