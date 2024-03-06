@@ -5,15 +5,15 @@
 
 <h1 align="center">React JS App Front-end</h1>
 
-### Version
+### `version`
 
 - 1.0
 
-### Issue: 20/02/2024.
+### `issue`
 
 - 22/02/2024
 
-### Frontend Developper
+### `developper`
 
 - David JULIEN
 
@@ -32,50 +32,46 @@ A user should be able to:
 
 A user should be able to:
 
-- ✓ Navigate to the login page (/login)\*\*
-- Fill out credentials\*\*
-- Login to the back-end API with JWT tokens for authentication\*\*
-- **✓ Successfully navigate to a profile page (/profile)**
+- Navigate to the login page (/login)
+- Fill out credentials
+- Login to the back-end API with JWT tokens for authentication
+- Successfully navigate to a profile page (/profile)\*
 
 ## #3 Logout Requirement
 
 A user should be able to:
 
-<ul>
-  <li style="color:green;">✓ See the logout button when logged in</li>
-  <li style="color:green;">✓ Click the logout button</li>
-  <li style="color:green;">✓ Be returned to the home page (/)</li>
-</ul>
-###
+- See the logout button when logged in
+- Click the logout button
+- Be returned to the home page (/)
+
+## #4 Privacy Requirement
+
+After successfully logging in, a user should be able to:
+
+- See their profile page
+- See their username on the profile page
+- See placeholder bank account information
+
+## #5Redux Requirement
+
+The React app contains an implementation of Redux for state management that:
+
+- a store to manage all of the data
+- action(s) for sending information
+- reducer(s) for handling application state changes
+
+## #6Update Profile Feature
+
+A user should be able to:
+
+- Edit their profile (first name and last name not editable. Only username can be changed). - [ ] This data should be persisted to the database.
 
 <p align="center">
   <img src="https://pacificgraphic.com/dj/argentbankview.jpg" alt="ARGENTBANK" width="100%">
 </p>
 
-<hr>
-
-### Déploiement
-
-Le site est hébergé dans un dépot sur la plateforme Git Hub :
-https://github.com/davidandaman/Portfolio-architecte-sophie-bluel
-
-### Accessibilité
-
-- Étapes pour lancer le projet :
-
-1. Lancer le backend d'après les informations contenu dans le fichier Readme.md du dossier Backend.
-
-2. les informations de l'API sont également dans le fichier Readme.md du dossier Backend.
-
-3. L'url du projet est accessible à cette adresse : http://127.0.0.1:5502/FrontEnd/index.html
-
-4. Les informations de connexion au login du site sont aussi dans le fichier Readme.md du dossier Backend
-
-### License
-
-- Ce projet est sous la licence GNU GPL V3.
-
-## Available Scripts
+<br>
 
 ### How to run the frontend application:
 
