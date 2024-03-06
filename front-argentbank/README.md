@@ -1,18 +1,16 @@
 <p align="center">
   <img src="https://pacificgraphic.com/dj/argentBankLogo.png" alt="ARGENTBANK" width="456" height="124">
   <br>
-
-<br>
 </p>
 
 <h1 align="center">React JS App Front-end</h1>
 <h2 align="center">Issue Template :</h2>
 
-# Version
+### Version
 
 - 1.0
 
-# Issue: 20/02/2024.
+### Issue: 20/02/2024.
 
 - 22/02/2024
 
@@ -26,14 +24,14 @@
 
 A user should be able to:
 
-- **✓ Navigate to the home page (/)**
-- **✓ See all placeholder data from mockup**
+- ** Navigate to the home page (/)**
+- ** See all placeholder data from mockup**
 
 ## #2 Login Requirement
 
 A user should be able to:
 
-- **✓ Navigate to the login page (/login)**
+- ** Navigate to the login page (/login)**
 - **✓ Fill out credentials**
 - **✓ Login to the back-end API with JWT tokens for authentication**
 - **✓ Successfully navigate to a profile page (/profile)**
