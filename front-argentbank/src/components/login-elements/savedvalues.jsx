@@ -6,10 +6,10 @@ export function getLocalStorageValues(keys) {
   return values;
 }
 
-export function saveLoginCredentials(email, password) {
+export function saveLoginCredentials(email, password, rememberMe) {
   localStorage.setItem("rememberedEmail", email);
   localStorage.setItem("rememberedPassword", password);
-  localStorage.setItem("rememberMe", "true");
+  localStorage.setItem("rememberMe", rememberMe ? "true" : "false");
 }
 
 export function deleteLoginCredentials() {
