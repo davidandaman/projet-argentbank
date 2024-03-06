@@ -15,7 +15,7 @@ export default function EditUserProfile({ setIsEditing }) {
       firstName: userDatas.firstName,
       lastName: userDatas.lastName,
       email: userDatas.email,
-      userName: userName, // Utilisez userName ici
+      userName: userName,
     };
     dispatch(updateUserDatas(updatedData));
     console.log(
@@ -34,6 +34,7 @@ export default function EditUserProfile({ setIsEditing }) {
           id="userName"
           value={userName}
           onChange={(e) => setUserName(e.target.value)}
+          className="input-edit"
         />
       </div>
       <div className="edit-button-container">

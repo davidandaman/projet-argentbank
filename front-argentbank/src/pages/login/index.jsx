@@ -5,7 +5,7 @@ import PrimaryButton from "../../components/login-elements/submitbutton";
 import { useNavigate } from "react-router-dom";
 import { login } from "../../datas/connexion-api";
 import { useDispatch, useSelector } from "react-redux";
-import { setRememberMe, setLoginError } from "../../redux/userslice";
+import { setLoginError } from "../../redux/userslice";
 import {
   saveLoginCredentials,
   deleteLoginCredentials,

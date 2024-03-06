@@ -27,7 +27,7 @@ export default function HeaderUserProfile() {
         <div className="user-initial-container">
           {userDatas && (
             <h1 className="first-last-name">
-              {userDatas.firstName} {userDatas.lastName}!
+              {userDatas.userName} {/* Afficher le nom d'utilisateur */}
             </h1>
           )}
           <PrimaryButton

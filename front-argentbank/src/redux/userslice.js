@@ -34,7 +34,9 @@ export const updateUserDatas = createAsyncThunk(
 const userSlice = createSlice({
   name: "auth",
   initialState: {
-    userDatas: null,
+    userDatas: {
+      userName: "", // Initialisez userName à une chaîne vide
+    },
     rememberMe: false,
     isLogged: false,
     loading: false,

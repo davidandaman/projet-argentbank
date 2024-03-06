@@ -4,6 +4,8 @@ import logo from "../../assets/img/argentBankLogo.png";
 import userIcon from "../../assets/img/icon-user.png";
 import { useDispatch, useSelector } from "react-redux";
 import { setisLogged } from "../../redux/userslice";
+import { faSignOutAlt } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Header() {
   const { isLogged, userDatas } = useSelector((state) => state.auth);
@@ -26,12 +28,16 @@ function Header() {
         <nav>
           {isLogged ? (
             <div className="main-nav-item">
-              <Link to={"/profile"}>
+              <div className="user-info">
                 <img className="user-icon" src={userIcon} alt="User" />
-              </Link>
+                <span className="user-name">{userDatas.userName}</span>
+              </div>
               <Link to={"/"} onClick={logOut} className="sign-out">
-                <i className="fa fa-sign-out"></i>
-                <span>Sign Out</span>
+                <FontAwesomeIcon
+                  icon={faSignOutAlt}
+                  className="sign-out-icon"
+                />
+                <span className="sign-out-text">Sign Out</span>
               </Link>
             </div>
           ) : (
