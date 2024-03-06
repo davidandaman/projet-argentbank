@@ -1,8 +1,7 @@
 <p align="center">
   <img src="https://pacificgraphic.com/dj/argentBankLogo.png" alt="ARGENTBANK" width="456" height="124">
   <br>
-  <legend>David <strong>Julien</strong></legend>
-<br>
+
 <br>
 </p>
 
@@ -15,17 +14,21 @@
 
 A user should be able to:
 
-- ✓ Navigate to the home page (/)
-- ✓ See all placeholder data from mockup
+<ul>
+  <li style="color:green;">✓ Navigate to the home page (/)</li>
+  <li style="color:green;">✓ See all placeholder data from mockup</li>
+</ul>
 
 ## #2 Login Requirement
 
 A user should be able to:
 
-- ✓ Navigate to the login page (/login)
-- ✓ Fill out credentials
-- ✓ Login to the back-end API with JWT tokens for authentication
-- ✓ Successfully navigate to a profile page (/profile)
+<ul>
+  <li style="color:green;">✓ Navigate to the login page (/login)</li>
+  <li style="color:green;">✓ Fill out credentials</li>
+  <li style="color:green;">✓ Login to the back-end API with JWT tokens for authentication</li>
+  <li style="color:green;">✓ Successfully navigate to a profile page (/profile)</li>
+</ul>
 
 ###
 
