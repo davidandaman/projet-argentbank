@@ -72,13 +72,18 @@ A user should be able to:
 
 - Edit their profile (first name and last name not editable. Only username can be changed). - [ ] This data should be persisted to the database.
 
+<br>
+<br>
+
 <p align="center">
   <img src="https://pacificgraphic.com/dj/argentbankview.jpg" alt="ARGENTBANK" width="100%">
 </p>
 
 <br>
+<br>
+<br>
 
-### How to run the frontend application:
+<h1> How to run the frontend application:</h1>
 
 In the project directory, you can run:
 
