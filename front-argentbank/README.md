@@ -8,27 +8,35 @@
 <h1 align="center">React JS App Front-end</h1>
 <h2 align="center">Issue Template :</h2>
 
+# Version
+
+- 1.0
+
+# Issue: 20/02/2024.
+
+- 22/02/2024
+
+### Frontend Developper
+
+- David JULIEN
+
 ###
 
 ## #1 Landing Page
 
 A user should be able to:
 
-<ul>
-  <li style="color:green;">✓ Navigate to the home page (/)</li>
-  <li style="color:green;">✓ See all placeholder data from mockup</li>
-</ul>
+- **✓ Navigate to the home page (/)**
+- **✓ See all placeholder data from mockup**
 
 ## #2 Login Requirement
 
 A user should be able to:
 
-<ul>
-  <li style="color:green;">✓ Navigate to the login page (/login)</li>
-  <li style="color:green;">✓ Fill out credentials</li>
-  <li style="color:green;">✓ Login to the back-end API with JWT tokens for authentication</li>
-  <li style="color:green;">✓ Successfully navigate to a profile page (/profile)</li>
-</ul>
+- **✓ Navigate to the login page (/login)**
+- **✓ Fill out credentials**
+- **✓ Login to the back-end API with JWT tokens for authentication**
+- **✓ Successfully navigate to a profile page (/profile)**
 
 ## #3 Logout Requirement
 
@@ -63,14 +71,6 @@ https://github.com/davidandaman/Portfolio-architecte-sophie-bluel
 3. L'url du projet est accessible à cette adresse : http://127.0.0.1:5502/FrontEnd/index.html
 
 4. Les informations de connexion au login du site sont aussi dans le fichier Readme.md du dossier Backend
-
-# Issue: 20/02/2024.
-
-- 22/02/2024
-
-### Frontend Developper
-
-- David JULIEN
 
 ### License
 
