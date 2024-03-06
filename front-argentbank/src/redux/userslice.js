@@ -31,6 +31,12 @@ export const updateUserDatas = createAsyncThunk(
   }
 );
 
+export const logoutUser = () => (dispatch) => {
+  localStorage.removeItem("token");
+  dispatch(setisLogged(false));
+  dispatch(setLoginError(null)); // Effacer le message d'erreur lors de la déconnexion
+};
+
 const userSlice = createSlice({
   name: "auth",
   initialState: {

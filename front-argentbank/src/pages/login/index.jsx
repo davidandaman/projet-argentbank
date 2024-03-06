@@ -41,6 +41,7 @@ export default function SigninUser() {
       password: passwordRef.current.value,
     }).then(
       () => {
+        dispatch(setLoginError(null)); // Effacer l'erreur lors de la connexion réussie
         navigate("/user");
         if (rememberMe) {
           saveLoginCredentials(
