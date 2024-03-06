@@ -30,6 +30,15 @@ A user should be able to:
   <li style="color:green;">✓ Successfully navigate to a profile page (/profile)</li>
 </ul>
 
+## #3 Logout Requirement
+
+A user should be able to:
+
+<ul>
+  <li style="color:green;">✓ See the logout button when logged in</li>
+  <li style="color:green;">✓ Click the logout button</li>
+  <li style="color:green;">✓ Be returned to the home page (/)</li>
+</ul>
 ###
 
 <p align="center">
