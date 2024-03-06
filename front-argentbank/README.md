@@ -4,7 +4,6 @@
 </p>
 
 <h1 align="center">React JS App Front-end</h1>
-<h2 align="center">Issue Template :</h2>
 
 ### Version
 
@@ -20,18 +19,20 @@
 
 ###
 
+<h2 align="center">Issue Template:</h2>
+
 ## #1 Landing Page
 
 A user should be able to:
 
-- ** Navigate to the home page (/)**
-- ** See all placeholder data from mockup**
+**✓ Navigate to the home page (/)**
+**✓ See all placeholder data from mockup**
 
 ## #2 Login Requirement
 
 A user should be able to:
 
-- ** Navigate to the login page (/login)**
+- **✓ Navigate to the login page (/login)**
 - **✓ Fill out credentials**
 - **✓ Login to the back-end API with JWT tokens for authentication**
 - **✓ Successfully navigate to a profile page (/profile)**
