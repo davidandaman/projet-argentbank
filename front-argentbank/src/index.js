@@ -8,7 +8,7 @@ import Footer from "./components/footer";
 import Error from "./pages/error";
 import Home from "./pages/homePage";
 
-import "./styles/layout.scss";
+import "./styles/styles.scss";
 import { Provider } from "react-redux";
 import { store } from "./redux/store";
 
