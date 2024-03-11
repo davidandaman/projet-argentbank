@@ -3,7 +3,7 @@
   <br>
 </p>
 
-<h1 align="center">React JS App Front-end</h1>
+<h1 align="center">React JS App Front-End</h1>
 <br>
 <br>
 
